@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSO Homepage — Elementor Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ============================================
+     ELEMENTOR-FRIENDLY MOCKUP
+     Built using standard Elementor patterns:
+     - Sections with inner sections
+     - Column-based layouts (no CSS grid)
+     - Standard widgets: Heading, Text Editor, Button, Icon Box, Image Box
+     - Background: Classic + Gradient
+     ============================================ */
+
+  :root {
+    --navy: #0a2240;
+    --navy-dark: #061730;
+    --navy-light: #1a3a66;
+    --teal: #00b8a9;
+    --teal-light: #00d4c8;
+    --teal-dark: #008a7e;
+    --white: #ffffff;
+    --off-white: #f8fafc;
+    --gray-light: #e8edf3;
+    --gray: #6b7a90;
+    --text: #2a3a55;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    line-height: 1.65;
+    background: var(--white);
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--navy); font-weight: 600; line-height: 1.2; }
+
+  /* Mockup labels (just for preview, REMOVE in real build) */
+  .elementor-label {
+    background: #ff4757; color: white;
+    font-family: 'Poppins', sans-serif; font-size: 10px;
+    font-weight: 600; padding: 4px 10px;
+    position: absolute; top: 8px; left: 8px;
+    z-index: 999; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    pointer-events: none;
+  }
+  .section-wrap { position: relative; }
+
+  /* ============ HEADER (Elementor Pro Header Template) ============ */
+  .ep-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+    padding: 18px 0;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+  .ep-container {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 20px;
+  }
+  .ep-header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+  }
+  .ep-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .ep-logo-icon {
+    width: 42px; height: 42px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--teal); font-weight: 700; font-size: 18px;
+  }
+  .ep-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px; font-weight: 600;
+    color: var(--navy); line-height: 1.1;
+  }
+  .ep-logo-text small {
+    display: block; font-family: 'Poppins', sans-serif;
+    font-size: 10px; font-weight: 400; color: var(--gray);
+    text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px;
+  }
+
+  .ep-nav {
+    display: flex; gap: 32px; align-items: center;
+  }
+  .ep-nav a {
+    color: var(--navy); text-decoration: none;
+    font-size: 14px; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .ep-nav a:hover { color: var(--teal); }
+
+  .ep-header-cta {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .ep-phone {
+    text-decoration: none; color: var(--navy);
+    font-size: 14px; font-weight: 600;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .ep-btn {
+    background: var(--teal);
+    color: var(--white) !important;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px; font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    transition: all 0.3s;
+    border: none; cursor: pointer;
+  }
+  .ep-btn:hover { background: var(--navy); }
+  .ep-btn-outline {
+    background: transparent;
+    color: var(--navy) !important;
+    border: 2px solid var(--navy);
+  }
+  .ep-btn-outline:hover { background: var(--navy); color: var(--white) !important; }
+  .ep-btn-white {
+    background: var(--white);
+    color: var(--navy) !important;
+  }
+  .ep-btn-white:hover { background: var(--teal); color: var(--white) !important; }
+
+  /* ============ SECTION 1: HERO ============ */
+  .ep-section-hero {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .ep-section-hero::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 50%; height: 100%;
+    background: radial-gradient(circle at 70% 50%, rgba(0, 184, 169, 0.15), transparent 60%);
+  }
+  .ep-row {
+    display: flex; flex-wrap: wrap;
+    margin: 0 -15px;
+    align-items: center;
+    position: relative;
+  }
+  .ep-col-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+  .ep-col-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
+  .ep-col-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+  .ep-col-12 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+
+  .hero-eyebrow {
+    color: var(--teal); font-size: 13px;
+    font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.15em; margin-bottom: 20px;
+  }
+  .hero-title {
+    color: var(--white); font-size: 56px;
+    font-weight: 600; line-height: 1.1; margin-bottom: 24px;
+  }
+  .hero-title span { color: var(--teal); font-style: italic; }
+  .hero-text {
+    color: rgba(255,255,255,0.8); font-size: 17px;
+    margin-bottom: 36px; max-width: 500px;
+  }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+  .hero-stats {
+    display: flex; gap: 40px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .hero-stat { color: var(--white); }
+  .hero-stat strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px; display: block; line-height: 1;
+    color: var(--teal);
+  }
+  .hero-stat span { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .hero-image-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0, 184, 169, 0.3);
+    border-radius: 8px;
+    padding: 60px 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  .hero-image-box .icon {
+    width: 100px; height: 100px;
+    margin: 0 auto 24px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--white); font-size: 48px;
+  }
+  .hero-image-box h3 {
+    color: var(--white); font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .hero-image-box p {
+    color: rgba(255,255,255,0.7); font-size: 14px;
+  }
+
+  /* ============ SECTION 2: TRUST/INSURANCE ============ */
+  .ep-section-trust {
+    background: var(--off-white);
+    padding: 50px 0;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .trust-label {
+    text-align: center;
+    font-size: 12px; font-weight: 600;
+    color: var(--gray); text-transform: uppercase;
+    letter-spacing: 0.15em; margin-bottom: 28px;
+  }
+  .trust-logos {
+    display: flex; justify-content: center;
+    align-items: center; gap: 50px; flex-wrap: wrap;
+  }
+  .trust-item {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; font-weight: 600;
+    color: var(--navy); opacity: 0.6;
+  }
+
+  /* ============ SECTION 3: SERVICES (Icon Box widgets) ============ */
+  .ep-section-services {
+    padding: 100px 0;
+    background: var(--white);
+  }
+  .section-heading {
+    text-align: center; margin-bottom: 60px;
+  }
+  .section-heading .eyebrow {
+    color: var(--teal); font-size: 12px;
+    font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.15em; margin-bottom: 14px;
+  }
+  .section-heading h2 {
+    font-size: 44px; margin-bottom: 16px;
+  }
+  .section-heading h2 span { color: var(--teal); font-style: italic; }
+  .section-heading p {
+    font-size: 17px; color: var(--gray);
+    max-width: 600px; margin: 0 auto;
+  }
+
+  .icon-box {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+    height: 100%;
+  }
+  .icon-box:hover {
+    border-color: var(--teal);
+    box-shadow: 0 20px 40px rgba(10, 34, 64, 0.1);
+    transform: translateY(-4px);
+  }
+  .icon-box-icon {
+    width: 70px; height: 70px;
+    background: var(--off-white);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    margin: 0 auto 24px;
+    color: var(--teal);
+    transition: all 0.3s;
+  }
+  .icon-box:hover .icon-box-icon {
+    background: var(--teal); color: var(--white);
+  }
+  .icon-box h3 {
+    font-size: 22px; margin-bottom: 12px;
+  }
+  .icon-box p {
+    color: var(--gray); font-size: 14px; margin-bottom: 20px;
+  }
+  .icon-box a {
+    color: var(--teal); text-decoration: none;
+    font-size: 13px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+
+  /* ============ SECTION 4: ABOUT/WHAT TO EXPECT ============ */
+  .ep-section-about {
+    background: var(--off-white);
+    padding: 100px 0;
+  }
+  .about-image {
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    border-radius: 8px;
+    aspect-ratio: 4/5;
+    display: grid; place-items: center;
+    color: var(--teal);
+    font-size: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-image::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(0, 184, 169, 0.2), transparent 60%);
+  }
+  .about-content { padding-left: 40px; }
+  .about-content .eyebrow {
+    color: var(--teal); font-size: 12px;
+    font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.15em; margin-bottom: 14px;
+  }
+  .about-content h2 {
+    font-size: 42px; margin-bottom: 24px;
+  }
+  .about-content h2 span { color: var(--teal); font-style: italic; }
+  .about-content > p {
+    font-size: 16px; color: var(--gray); margin-bottom: 28px;
+  }
+  .checklist { margin-bottom: 36px; }
+  .checklist-item {
+    display: flex; align-items: flex-start;
+    gap: 14px; margin-bottom: 16px;
+  }
+  .checklist-item .check {
+    width: 24px; height: 24px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--white); font-size: 12px;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .checklist-item span { font-size: 15px; color: var(--text); }
+
+  /* ============ SECTION 5: LOCATIONS ============ */
+  .ep-section-locations {
+    padding: 100px 0;
+    background: var(--white);
+  }
+  .location-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+  }
+  .location-card:hover {
+    border-color: var(--teal);
+    box-shadow: 0 15px 35px rgba(10, 34, 64, 0.1);
+  }
+  .location-map {
+    background: var(--navy);
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+  }
+  .location-map::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 184, 169, 0.2) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 184, 169, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .location-pin {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px; height: 36px;
+    background: var(--teal);
+    border-radius: 50% 50% 50% 0;
+    rotate: -45deg;
+    box-shadow: 0 0 0 6px rgba(0, 184, 169, 0.2);
+  }
+  .location-body { padding: 28px; }
+  .location-body h4 {
+    font-size: 20px; margin-bottom: 4px;
+  }
+  .location-body .loc-tag {
+    font-size: 11px; color: var(--teal);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    font-weight: 600; margin-bottom: 14px; display: block;
+  }
+  .location-body p {
+    font-size: 14px; color: var(--gray);
+    margin-bottom: 18px;
+  }
+  .location-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .location-actions a {
+    font-size: 12px; font-weight: 600;
+    color: var(--navy); text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .location-actions a:hover {
+    background: var(--navy); color: var(--white);
+    border-color: var(--navy);
+  }
+
+  /* ============ SECTION 6: CTA BANNER ============ */
+  .ep-section-cta {
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ep-section-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 184, 169, 0.15), transparent 60%);
+  }
+  .ep-section-cta h2 {
+    color: var(--white); font-size: 44px; margin-bottom: 16px;
+    position: relative;
+  }
+  .ep-section-cta h2 span { color: var(--teal); font-style: italic; }
+  .ep-section-cta p {
+    color: rgba(255,255,255,0.8); font-size: 17px;
+    margin-bottom: 36px; max-width: 600px;
+    margin-left: auto; margin-right: auto;
+    position: relative;
+  }
+  .cta-buttons {
+    display: flex; gap: 16px; justify-content: center;
+    flex-wrap: wrap; position: relative;
+  }
+
+  /* ============ FOOTER ============ */
+  .ep-footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.7);
+    padding: 70px 0 30px;
+  }
+  .footer-col h5 {
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px; font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+  .footer-col a {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--teal); }
+  .footer-brand-text {
+    font-size: 14px;
+    margin-top: 16px;
+    max-width: 280px;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 50px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 1024px) {
+    .ep-col-6, .ep-col-4 { flex: 0 0 50%; max-width: 50%; }
+    .hero-title { font-size: 42px; }
+    .ep-nav { display: none; }
+  }
+  @media (max-width: 640px) {
+    .ep-col-6, .ep-col-4, .ep-col-3 { flex: 0 0 100%; max-width: 100%; }
+    .hero-title { font-size: 34px; }
+    .section-heading h2, .ep-section-cta h2 { font-size: 32px; }
+    .about-content { padding-left: 0; padding-top: 30px; }
+    .hero-stats { flex-wrap: wrap; gap: 20px; }
+    .ep-header-cta .ep-phone { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===========================================
+     ELEMENTOR HEADER TEMPLATE
+     Theme Builder → Header → New Template
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Header Template</span>
+  <header class="ep-header">
+    <div class="ep-container">
+      <div class="ep-header-inner">
+        <a href="#" class="ep-logo">
+          <span class="ep-logo-icon">N</span>
+          <div class="ep-logo-text">
+            Nephrology Specialists
+            <small>of Oklahoma</small>
+          </div>
+        </a>
+        <nav class="ep-nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Locations</a>
+          <a href="#">Providers</a>
+          <a href="#">Patients</a>
+        </nav>
+        <div class="ep-header-cta">
+          <a href="tel:+19187125000" class="ep-phone">📞 (918) 712-5000</a>
+          <a href="#" class="ep-btn">Request Appointment</a>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- ===========================================
+     SECTION 1: HERO
+     Structure: Section (full-width) > 2 Columns (50/50)
+     Background: Gradient (navy → navy-light)
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Section 1 · Hero · 2 Cols</span>
+  <section class="ep-section-hero">
+    <div class="ep-container">
+      <div class="ep-row">
+
+        <!-- LEFT COLUMN (Heading + Text + Buttons + Stats) -->
+        <div class="ep-col-6">
+          <div class="hero-eyebrow">— Excellence in Kidney Care · Since 1984</div>
+          <h1 class="hero-title">Kidney care that's <span>actually</span> within reach.</h1>
+          <p class="hero-text">Comprehensive nephrology for adults across Tulsa and surrounding Oklahoma. Compassionate, board-certified specialists who treat the whole patient.</p>
+          <div class="hero-buttons">
+            <a href="#" class="ep-btn">Request an Appointment →</a>
+            <a href="#" class="ep-btn ep-btn-white">Our Services</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><strong>40+</strong><span>Years of Care</span></div>
+            <div class="hero-stat"><strong>4</strong><span>Locations</span></div>
+            <div class="hero-stat"><strong>24/7</strong><span>Hospital Coverage</span></div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN (Image Box widget) -->
+        <div class="ep-col-6">
+          <div class="hero-image-box">
+            <div class="icon">♥</div>
+            <h3>Patient-First Philosophy</h3>
+            <p>We take care of the whole patient, not just the kidney disease. Every visit, every time.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===========================================
+     SECTION 2: TRUST / INSURANCE
+     Structure: Section > 1 Column > Heading + Inner Section (6 cols)
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Section 2 · Trust Row</span>
+  <section class="ep-section-trust">
+    <div class="ep-container">
+      <div class="trust-label">Most Major Insurance Plans Accepted</div>
+      <div class="trust-logos">
+        <div class="trust-item">BlueCross</div>
+        <div class="trust-item">Aetna</div>
+        <div class="trust-item">Cigna</div>
+        <div class="trust-item">UnitedHealth</div>
+        <div class="trust-item">Medicare</div>
+        <div class="trust-item">Humana</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===========================================
+     SECTION 3: SERVICES
+     Structure: Section > 1 Col (Heading) + Inner Section (3 cols × 2 rows)
+     Widget: Icon Box (Elementor core widget)
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Section 3 · Services · 3 Cols × 2 Rows · Icon Box widgets</span>
+  <section class="ep-section-services">
+    <div class="ep-container">
+
+      <!-- Heading row -->
+      <div class="section-heading">
+        <div class="eyebrow">— Our Services</div>
+        <h2>How we <span>care for you</span></h2>
+        <p>Comprehensive kidney care from routine clinics to advanced dialysis programs and inpatient hospital coverage.</p>
+      </div>
+
+      <!-- Row 1: 3 columns -->
+      <div class="ep-row">
+        <div class="ep-col-4">
+          <div class="icon-box">
+            <div class="icon-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v8M12 22v-8M4.93 4.93l5.66 5.66M13.41 13.41l5.66 5.66M2 12h8M14 12h8"/></svg>
+            </div>
+            <h3>Kidney Clinic</h3>
+            <p>General nephrology care for chronic kidney disease, hypertension, and electrolyte disorders.</p>
+            <a href="#">Learn More →</a>
+          </div>
+        </div>
+        <div class="ep-col-4">
+          <div class="icon-box">
+            <div class="icon-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Specialty Clinics</h3>
+            <p>Transplant evaluation, glomerular disease, and home dialysis training programs.</p>
+            <a href="#">Learn More →</a>
+          </div>
+        </div>
+        <div class="ep-col-4">
+          <div class="icon-box">
+            <div class="icon-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </div>
+            <h3>Outreach Clinics</h3>
+            <p>Specialty kidney care delivered closer to home for rural Oklahoma communities.</p>
+            <a href="#">Learn More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: 3 columns -->
+      <div class="ep-row" style="margin-top: 10px;">
+        <div class="ep-col-4">
+          <div class="icon-box">
+            <div class="icon-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/></svg>
+            </div>
+            <h3>Hospital Care</h3>
+            <p>24/7 inpatient nephrology consultation across partner hospitals throughout the region.</p>
+            <a href="#">Learn More →</a>
+          </div>
+        </div>
+        <div class="ep-col-4">
+          <div class="icon-box">
+            <div class="icon-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Dialysis Units</h3>
+            <p>In-center hemodialysis and home dialysis support managed by experienced clinical teams.</p>
+            <a href="#">Learn More →</a>
+          </div>
+        </div>
+        <div class="ep-col-4">
+          <div class="icon-box">
+            <div class="icon-box-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+            </div>
+            <h3>Patient Education</h3>
+            <p>Resources to help you understand your diagnosis and take control of your kidney health.</p>
+            <a href="#">Learn More →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ===========================================
+     SECTION 4: ABOUT / WHAT TO EXPECT
+     Structure: Section > 2 Cols (40/60)
+     Left: Image widget
+     Right: Heading + Text + Icon List + Button
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Section 4 · About · 2 Cols (Image + Content)</span>
+  <section class="ep-section-about">
+    <div class="ep-container">
+      <div class="ep-row">
+
+        <div class="ep-col-6">
+          <div class="about-image">⚕</div>
+        </div>
+
+        <div class="ep-col-6">
+          <div class="about-content">
+            <div class="eyebrow">— What to Expect</div>
+            <h2>Your first visit, <span>simplified.</span></h2>
+            <p>Our team of nephrologists, advanced practitioners, and nurses will guide you through every step of your kidney care journey — starting from day one.</p>
+
+            <div class="checklist">
+              <div class="checklist-item">
+                <div class="check">✓</div>
+                <span>Complete medical history and physical examination</span>
+              </div>
+              <div class="checklist-item">
+                <div class="check">✓</div>
+                <span>Review of your current and past lab results</span>
+              </div>
+              <div class="checklist-item">
+                <div class="check">✓</div>
+                <span>Medication review with adjustments as needed</span>
+              </div>
+              <div class="checklist-item">
+                <div class="check">✓</div>
+                <span>Personalized care plan with your primary physician</span>
+              </div>
+            </div>
+
+            <a href="#" class="ep-btn">Meet Our Providers →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===========================================
+     SECTION 5: LOCATIONS
+     Structure: Section > 1 Col (Heading) + Inner Section (4 cols)
+     Widget: Image Box or custom HTML widget
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Section 5 · Locations · 4 Cols</span>
+  <section class="ep-section-locations">
+    <div class="ep-container">
+
+      <div class="section-heading">
+        <div class="eyebrow">— Our Locations</div>
+        <h2>Four offices, <span>one philosophy</span></h2>
+        <p>Quality kidney care across Tulsa, McAlester, and Muskogee. Click any location for directions.</p>
+      </div>
+
+      <div class="ep-row">
+
+        <div class="ep-col-3">
+          <div class="location-card">
+            <div class="location-map"><div class="location-pin"></div></div>
+            <div class="location-body">
+              <h4>Yale Office</h4>
+              <span class="loc-tag">Main · Tulsa</span>
+              <p>6465 S Yale Ave, Suite 507<br>Tulsa, OK 74136</p>
+              <div class="location-actions">
+                <a href="#">📍 Directions</a>
+                <a href="#">📞 Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ep-col-3">
+          <div class="location-card">
+            <div class="location-map"><div class="location-pin"></div></div>
+            <div class="location-body">
+              <h4>Utica Office</h4>
+              <span class="loc-tag">Midtown · Tulsa</span>
+              <p>1145 S Utica Ave, Suite 364<br>Tulsa, OK 74104</p>
+              <div class="location-actions">
+                <a href="#">📍 Directions</a>
+                <a href="#">📞 Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ep-col-3">
+          <div class="location-card">
+            <div class="location-map"><div class="location-pin"></div></div>
+            <div class="location-body">
+              <h4>McAlester</h4>
+              <span class="loc-tag">McAlester</span>
+              <p>2 Clark Bass Blvd, #302<br>McAlester, OK 74501</p>
+              <div class="location-actions">
+                <a href="#">📍 Directions</a>
+                <a href="#">📞 Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ep-col-3">
+          <div class="location-card">
+            <div class="location-map"><div class="location-pin"></div></div>
+            <div class="location-body">
+              <h4>Muskogee</h4>
+              <span class="loc-tag">Muskogee</span>
+              <p>2316 W Shawnee Street<br>Muskogee, OK 74401</p>
+              <div class="location-actions">
+                <a href="#">📍 Directions</a>
+                <a href="#">📞 Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===========================================
+     SECTION 6: CTA BANNER
+     Structure: Section (full-width) > 1 Col
+     Background: Gradient
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Section 6 · CTA Banner · 1 Col</span>
+  <section class="ep-section-cta">
+    <div class="ep-container">
+      <h2>Ready to take the <span>first step?</span></h2>
+      <p>Connect with a kidney care specialist today. A real member of our team will reach out within one business day.</p>
+      <div class="cta-buttons">
+        <a href="#" class="ep-btn ep-btn-white">Request Appointment</a>
+        <a href="tel:+19187125000" class="ep-btn" style="background: transparent; border: 2px solid white;">📞 (918) 712-5000</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===========================================
+     ELEMENTOR FOOTER TEMPLATE
+     Theme Builder → Footer → New Template
+     =========================================== -->
+<div class="section-wrap">
+  <span class="elementor-label">Footer Template</span>
+  <footer class="ep-footer">
+    <div class="ep-container">
+      <div class="ep-row">
+        <div class="ep-col-6">
+          <div class="footer-col">
+            <a href="#" class="ep-logo">
+              <span class="ep-logo-icon">N</span>
+              <div class="ep-logo-text" style="color: white;">
+                Nephrology Specialists
+                <small style="color: rgba(255,255,255,0.5);">of Oklahoma</small>
+              </div>
+            </a>
+            <p class="footer-brand-text">Excellence in kidney care since 1984. Serving Tulsa, McAlester, Muskogee and surrounding Oklahoma communities.</p>
+          </div>
+        </div>
+        <div class="ep-col-3">
+          <div class="footer-col">
+            <h5>Services</h5>
+            <a href="#">Kidney Clinic</a>
+            <a href="#">Specialty Clinics</a>
+            <a href="#">Dialysis Units</a>
+            <a href="#">Hospital Care</a>
+          </div>
+        </div>
+        <div class="ep-col-3">
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <a href="tel:+19187125000">(918) 712-5000</a>
+            <a href="#">All Locations</a>
+            <a href="#">Make a Payment</a>
+            <a href="#">MyChart Login</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Nephrology Specialists of Oklahoma. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
