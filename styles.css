@@ -340,7 +340,8 @@ footer .bar{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
 
 /* ===== Responsive hardening (applies to every page via shared CSS) ===== */
-html,body{max-width:100%;overflow-x:hidden}
+html{max-width:100%}
+body{max-width:100%;overflow-x:clip}
 iframe,img,svg{max-width:100%}
 @media(max-width:1020px){
   .info-grid.cols3{grid-template-columns:repeat(2,1fr)}
