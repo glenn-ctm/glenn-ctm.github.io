@@ -12,7 +12,7 @@
   --shadow:0 18px 50px -22px rgba(18,63,92,.45);
   --shadow-sm:0 8px 24px -14px rgba(18,63,92,.4);
   --maxw:1180px;
-  --display:"Fraunces",Georgia,serif; --body:"Inter",system-ui,sans-serif;
+  --display:"Lora",Georgia,serif; --body:"Inter",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -97,7 +97,7 @@ nav.ribbon>a:hover,.has-sub:hover>a,nav.ribbon>a.active{background:var(--sage);c
 .hero-actions .callnow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:#fff}
 .hero-actions .callnow svg{width:20px;height:20px;fill:#fff}
 .hero-card{position:relative}
-.hero-card .photo{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.55);aspect-ratio:4/5;background:#123f5c url('https://nsokdev.rocket31.cloud/wp-content/uploads/elementor/thumbs/AdobeStock_1967918166_Preview-rlzr282eskwkwfl2lfmy8e5yu2s8wgdj4q0vopn3w0.jpeg') center/cover}
+.hero-card .photo{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.55);aspect-ratio:4/5;background:#123f5c url('images/home-hero.jpg') center/cover}
 .hero-badge{position:absolute;left:-22px;bottom:-26px;background:#fff;color:var(--ink);border-radius:18px;padding:18px 22px;box-shadow:var(--shadow);max-width:240px}
 .hero-badge b{font-family:var(--display);font-size:1.05rem;color:var(--primary-700);display:block;margin-bottom:3px}
 .hero-badge span{font-size:.9rem;color:var(--muted)}
@@ -154,7 +154,7 @@ section{padding:88px 0}
 
 /* Expect block */
 .expect .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
-.expect .photo{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:5/4;box-shadow:var(--shadow);background:#123f5c url('https://as1.ftcdn.net/v2/jpg/18/08/09/78/1000_F_1808097864_gmc6X5NAjZ3WVlxs9lqrWt3tGPhwhmCL.jpg') center/cover}
+.expect .photo{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:5/4;box-shadow:var(--shadow);background:#123f5c url('images/home-first-visit.jpg') center/cover}
 .expect h2{color:#fff;font-size:clamp(2rem,3.4vw,2.7rem);margin:14px 0 16px}
 .expect .eyebrow{color:var(--amber)}.expect .eyebrow::before{background:var(--amber)}
 .expect p.intro{color:#cfe7e1;font-size:1.12rem;margin-bottom:26px;max-width:46ch}
@@ -338,6 +338,36 @@ footer .bar{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+/* ===== Client revisions ===== */
+/* Utility bar — make "Make a Payment" stand out */
+.u-right a.lbl:first-of-type{background:var(--coral);color:#fff;padding:6px 16px;border-radius:100px;font-weight:700;box-shadow:0 8px 18px -10px rgba(226,114,91,.9)}
+.u-right a.lbl:first-of-type:hover{background:var(--coral-600);color:#fff}
+
+/* Home — slightly smaller clinic-office cards */
+.loc .map{aspect-ratio:16/6}
+.loc .body{padding:20px 22px}
+
+/* Physicians — slightly smaller headshots */
+.prov .pic{aspect-ratio:4/4.7}
+
+/* Physicians — Emeritus: smaller, square thumbnails (source images are low-resolution) */
+.prov-grid.emeritus{grid-template-columns:repeat(4,1fr)}
+.prov-grid.emeritus .prov{text-align:center;padding:24px 16px 4px}
+.prov-grid.emeritus .pic{width:130px;max-width:75%;aspect-ratio:1;border-radius:50%;margin:0 auto;box-shadow:var(--shadow-sm)}
+.prov-grid.emeritus .meta{padding:14px 8px 20px}
+@media(max-width:1020px){.prov-grid.emeritus{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:780px){.prov-grid.emeritus{grid-template-columns:repeat(2,1fr)}}
+
+/* Education — clickable organization names */
+.res h3 a{color:inherit;display:inline-flex;align-items:center;gap:7px}
+.res h3 a:hover{color:var(--primary);text-decoration:underline}
+.res h3 a svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;opacity:.7}
+
+/* Full-width image band (brings text-heavy pages to life) */
+.media-band{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+.media-band img{width:100%;aspect-ratio:5/2;object-fit:cover;object-position:center 35%;display:block}
+@media(max-width:780px){.media-band img{aspect-ratio:3/2}}
 
 /* ===== Responsive hardening (applies to every page via shared CSS) ===== */
 html{max-width:100%}
