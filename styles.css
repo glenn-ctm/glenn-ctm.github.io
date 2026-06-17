@@ -70,6 +70,8 @@ nav.ribbon>a:hover,.has-sub:hover>a,nav.ribbon>a.active{background:var(--sage);c
 .has-sub:hover .submenu{opacity:1;visibility:visible;transform:translateY(0)}
 .submenu a{display:block;padding:11px 14px;border-radius:10px;font-weight:500;font-size:.98rem}
 .submenu a:hover{background:var(--sage);color:var(--primary-700)}
+.submenu a.subitem{padding-left:30px;font-size:.9rem;color:var(--muted)}
+.submenu a.subitem:hover{color:var(--primary-700)}
 .nav-cta{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .menu-toggle svg{width:30px;height:30px;stroke:var(--primary-700);stroke-width:2;fill:none}
@@ -83,6 +85,7 @@ nav.ribbon>a:hover,.has-sub:hover>a,nav.ribbon>a.active{background:var(--sage);c
 .mobile-inner .close svg{width:28px;height:28px;stroke:var(--primary-700);stroke-width:2;fill:none}
 .mobile-inner a{display:block;padding:13px 8px;font-weight:600;font-size:1.1rem;border-bottom:1px solid rgba(12,43,41,.08)}
 .mobile-inner .sub a{padding-left:24px;font-weight:500;font-size:1rem;color:var(--muted)}
+.mobile-inner .sub a.subitem{padding-left:40px;font-size:.94rem}
 .mobile-inner .btn{width:100%;justify-content:center;margin-top:22px}
 
 /* Home hero */
