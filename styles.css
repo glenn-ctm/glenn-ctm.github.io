@@ -359,10 +359,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:1020px){.prov-grid.emeritus{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:780px){.prov-grid.emeritus{grid-template-columns:repeat(2,1fr)}}
 
-/* Education — clickable organization names */
-.res h3 a{color:inherit;display:inline-flex;align-items:center;gap:7px}
-.res h3 a:hover{color:var(--primary);text-decoration:underline}
-.res h3 a svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;opacity:.7}
+/* Education — official organization logos as card headers */
+.res h3{margin-bottom:18px;min-height:48px;display:flex;align-items:center}
+.res-logo-link{display:inline-flex;align-items:center;gap:12px;transition:opacity .15s}
+.res-logo-link:hover{opacity:.78}
+.res-logo{height:42px;width:auto;max-width:230px;object-fit:contain;display:block}
+.res-logo-mark{height:44px;width:44px;border-radius:9px}
+.res-logo-name{font-family:var(--display);font-size:1.18rem;font-weight:600;color:var(--primary-700)}
 
 /* Full-width image band (brings text-heavy pages to life) */
 .media-band{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
