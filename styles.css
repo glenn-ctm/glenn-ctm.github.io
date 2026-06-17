@@ -176,13 +176,14 @@ section{padding:88px 0}
 .loc .phones svg{width:16px;height:16px;fill:var(--primary)}
 
 /* Providers grid */
-.prov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.prov-grid{max-width:940px;margin-inline:auto}
 .prov{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
 .prov:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .prov .pic{aspect-ratio:3/4;background:var(--sage-deep) center/cover}
-.prov .meta{padding:18px 18px 22px}
-.prov h3{font-size:1.18rem;color:var(--primary-700);line-height:1.15}
-.prov span{color:var(--coral);font-weight:600;font-size:.92rem}
+.prov .meta{padding:14px 14px 18px}
+.prov h3{font-size:1.05rem;color:var(--primary-700);line-height:1.15}
+.prov span{color:var(--coral);font-weight:600;font-size:.88rem}
 .prov-foot{text-align:center;margin-top:42px}
 .group-title{font-size:1.5rem;color:var(--primary-700);margin:0 0 8px;display:flex;align-items:center;gap:14px}
 .group-title::after{content:"";flex:1;height:2px;background:var(--sage-deep)}
@@ -318,6 +319,7 @@ footer .bar{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:
   .hero .wrap{grid-template-columns:1fr;gap:46px}.hero-card{max-width:440px}
   .expect .wrap,.education .wrap,.content-2col,.leader{grid-template-columns:1fr;gap:34px}
   .prov-grid{grid-template-columns:repeat(3,1fr)}
+  .prov-grid{max-width:none}
   .sticky-cta{position:static}
 }
 @media(max-width:780px){
